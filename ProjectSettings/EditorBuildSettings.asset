@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/HyperLuminal/SlidingTilePuzzle/Scenes/SlidingTilePuzzle.unity
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue2.unity
+    guid: 1301605bb08aa1b40a0e5741f5ab87af
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue3.unity
+    guid: 1f3a357c3450add448c8e97862f60ac1
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue4.unity
+    guid: a8bc282ccb5e80b43900eb1921ae1aed
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue5.unity
+    guid: e3b9126d3a3d7aa4f9ebec96f879358e
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue6.unity
+    guid: de7d2e2ea9cd7004c8fefc06d1b1d92e
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue7.unity
+    guid: e88ee978c6cb02b49ab1145f310ee195
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue8.unity
+    guid: 2de18353a312e0a45ad1199c261018b1
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue9.unity
+    guid: 4c874099c33c1ba4aa4de29f0aaa49f8
+  - enabled: 1
+    path: Assets/Scenes/Prologue/Prologue10.unity
+    guid: 963ccd4da888bec45a829a0ab41f0b51
+  m_configObjects: {}
