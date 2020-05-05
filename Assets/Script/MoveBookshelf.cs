@@ -20,8 +20,9 @@ public class MoveBookshelf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        /*if (Input.GetMouseButton(0))
         {
+
             if (is_click == false)
             {
                 a += 0.00005f;
@@ -32,7 +33,8 @@ public class MoveBookshelf : MonoBehaviour
                     a = 0f;
                 }
             }
-        }
+
+        }*/
         
     }
 }
