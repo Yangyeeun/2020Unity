@@ -5,9 +5,16 @@ using UnityEngine.UI;
 public class CameraManager : MonoBehaviour
 {
     public Camera Left1Camera, Left2Camera, Left3Camera, Right1Camera, Right2Camera, Right3Camera, BookCamera, MainCamera, BossCamera, BeamCamera, OutCamera, WallCamera;
+    public GameObject WallArea;
+    //OutArea;
+    public bool check1;
     // Start is called before the first frame update
     void Start()
     {
+        //WallArea.SetActive(false);
+        //OutArea.SetActive(false);
+        
+        check1 = false;
         Left1Camera.gameObject.SetActive(false);
         Left2Camera.gameObject.SetActive(false);
         Left3Camera.gameObject.SetActive(false);
@@ -24,22 +31,7 @@ public class CameraManager : MonoBehaviour
     {
         
     }
-    public void Click_Escape()
-    {
-        MainCamera.gameObject.SetActive(true);
-
-        Left1Camera.gameObject.SetActive(false);
-        Left2Camera.gameObject.SetActive(false);
-        Left3Camera.gameObject.SetActive(false);
-        Right1Camera.gameObject.SetActive(false);
-        Right2Camera.gameObject.SetActive(false);
-        Right3Camera.gameObject.SetActive(false);
-        BookCamera.gameObject.SetActive(false);
-        BossCamera.gameObject.SetActive(false);
-        BeamCamera.gameObject.SetActive(false);
-        OutCamera.gameObject.SetActive(false);
-        WallCamera.gameObject.SetActive(false);
-    }
+   
     void OnMouseDown()
     {
         if(gameObject.tag == "Left-1")
@@ -159,6 +151,9 @@ public class CameraManager : MonoBehaviour
             BeamCamera.gameObject.SetActive(false);
             OutCamera.gameObject.SetActive(false);
             WallCamera.gameObject.SetActive(false);
+
+            //WallArea.SetActive(true);
+            //check1 = true;
         }
 
         if (gameObject.tag == "Book")
@@ -195,7 +190,7 @@ public class CameraManager : MonoBehaviour
             WallCamera.gameObject.SetActive(false);
 
         }
-        if(gameObject.tag == "Out")
+        /*if(gameObject.tag == "Out")
         {
             OutCamera.gameObject.SetActive(true);
 
@@ -210,7 +205,9 @@ public class CameraManager : MonoBehaviour
             BossCamera.gameObject.SetActive(false);
             MainCamera.gameObject.SetActive(false);
             WallCamera.gameObject.SetActive(false);
-        }
+            //check = true;
+            //check1 = false;
+        }*/
         if(gameObject.tag == "Wall")
         {
             WallCamera.gameObject.SetActive(true);
@@ -226,6 +223,9 @@ public class CameraManager : MonoBehaviour
             Right1Camera.gameObject.SetActive(false);
             BossCamera.gameObject.SetActive(false);
             MainCamera.gameObject.SetActive(false);
+
+            //check1 = false;
+            
         }
     }
 }

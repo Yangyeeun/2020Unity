@@ -5,11 +5,12 @@ using UnityEngine.UI;
 public class TrashCan : MonoBehaviour
 {
     public bool is_can;
-    public Image item;
-    public Sprite newitem;
+    public GameObject item;
+    //public Sprite newitem;
     // Start is called before the first frame update
     void Start()
     {
+        //item.SetActive(false);
         is_can = false;
     }
 
@@ -22,9 +23,9 @@ public class TrashCan : MonoBehaviour
     {
         if (gameObject.tag == "trash" && is_can == false)
         {
-            Debug.Log("Get Battery");
-            item = item.GetComponent<Image>();
-            item.sprite = newitem;
+
+            item.SetActive(true);
+            //item.sprite = newitem;
             //item = Resources.Load<Sprite>("axe");
             is_can = true;
         }
