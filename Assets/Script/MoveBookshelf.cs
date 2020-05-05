@@ -20,27 +20,19 @@ public class MoveBookshelf : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (is_click == true)
+        if (Input.GetMouseButton(0))
         {
-            a += 0.0002f;//이동
-            bookshelf.transform.Translate(0, 0, a);
-
-            if (a > 0.0475)//특정 거리 넘으면
+            if (is_click == false)
             {
-                is_click = false;//이동을 멈추고
-                is_ing = true;
-                a = 0f;
+                a += 0.00005f;
+                bookshelf.transform.Translate(0, 0, a);
+                if (a > 0.025)
+                {
+                    is_click = true;
+                    a = 0f;
+                }
             }
         }
-    }
-
-    void OnMouseDown()
-    {
-
-        if (is_ing == false)
-        {
-            is_click = true;
-            
-        }
+        
     }
 }

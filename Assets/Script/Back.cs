@@ -4,14 +4,11 @@ using UnityEngine;
 
 public class Back : MonoBehaviour
 {
-    public Camera Left1Camera, Left2Camera, Left3Camera, Right1Camera, Right2Camera, Right3Camera, BookCamera, MainCamera, BossCamera, BeamCamera, OutCamera, WallCamera;
-    GameObject CM;
-    bool bl;
+    public Camera Left1Camera, Left2Camera, Left3Camera, Right1Camera, Right2Camera, Right3Camera, BookCamera, MainCamera, BossCamera, BeamCamera, WallCamera;
     // Start is called before the first frame update
     void Start()
     {
-        CM = GameObject.Find("CameraManager").GetComponent<CameraManager>().WallArea;
-        bl = GameObject.Find("CameraManager").GetComponent<CameraManager>().check1;
+        
     }
 
     // Update is called once per frame
@@ -34,7 +31,6 @@ public class Back : MonoBehaviour
         BookCamera.gameObject.SetActive(false);
         BossCamera.gameObject.SetActive(false);
         BeamCamera.gameObject.SetActive(false);
-        OutCamera.gameObject.SetActive(false);
         WallCamera.gameObject.SetActive(false);
     }
 }
