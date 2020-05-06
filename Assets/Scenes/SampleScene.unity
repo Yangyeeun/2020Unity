@@ -11407,6 +11407,7 @@ MonoBehaviour:
   BeamCamera: {fileID: 1293104267}
   WallCamera: {fileID: 1064630978}
   PhoneUI: {fileID: 1133211210}
+  ClickArea: {fileID: 859541035}
 --- !u!4 &712812478
 Transform:
   m_ObjectHideFlags: 0
@@ -13030,6 +13031,7 @@ Transform:
   - {fileID: 60080992}
   - {fileID: 2118983679}
   - {fileID: 2048189739}
+  - {fileID: 1753145052}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18788,6 +18790,8 @@ MonoBehaviour:
   BossCamera: {fileID: 571388984}
   BeamCamera: {fileID: 1293104267}
   WallCamera: {fileID: 1064630978}
+  ClickArea: {fileID: 859541035}
+  PhoneUI: {fileID: 1133211210}
 --- !u!114 &1111710598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20924,9 +20928,10 @@ GameObject:
   - component: {fileID: 1221588368}
   - component: {fileID: 1221588370}
   - component: {fileID: 1221588369}
+  - component: {fileID: 1221588371}
   m_Layer: 0
   m_Name: smartphone
-  m_TagString: Phone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20996,6 +21001,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1221588367}
   m_Mesh: {fileID: 4300002, guid: 4e9bb637798979a4ca9e30741b7e2c77, type: 3}
+--- !u!65 &1221588371
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221588367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.066889316, y: 0.0069652298, z: 0.13801868}
+  m_Center: {x: -0.00000023841858, y: 0.0034846978, z: -0.00000011920929}
 --- !u!1001 &1226182522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30046,6 +30064,50 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &1753145051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753145052}
+  - component: {fileID: 1753145053}
+  m_Layer: 0
+  m_Name: phone
+  m_TagString: Phone
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1753145052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753145051}
+  m_LocalRotation: {x: -0, y: -0.23193942, z: -0, w: 0.9727303}
+  m_LocalPosition: {x: 3.617, y: -2.664, z: -0.83}
+  m_LocalScale: {x: 0.2023886, y: 0.77837, z: 1}
+  m_Children: []
+  m_Father: {fileID: 806968848}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: -26.823002, z: 0}
+--- !u!65 &1753145053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753145051}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.1932163, y: 1.2106705, z: 1}
+  m_Center: {x: 2.0966082, y: 0.10533513, z: 0.0000000032521719}
 --- !u!1 &1753561569 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2450695684340628237, guid: c4a76a6ae76d01f45a4dbe6e9fce1f58,
@@ -37674,7 +37736,7 @@ PrefabInstance:
     - target: {fileID: 404484452733789416, guid: 0c6172df491de5441856fe8a628e6672,
         type: 3}
       propertyPath: m_TagString
-      value: Phone
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6172df491de5441856fe8a628e6672, type: 3}

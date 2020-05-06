@@ -5,6 +5,9 @@ using UnityEngine;
 public class Back : MonoBehaviour
 {
     public Camera Left1Camera, Left2Camera, Left3Camera, Right1Camera, Right2Camera, Right3Camera, BookCamera, MainCamera, BossCamera, BeamCamera, WallCamera;
+    public GameObject ClickArea;//아영 right-3
+    public GameObject PhoneUI;//아영
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,16 @@ public class Back : MonoBehaviour
     {
         //CM.SetActive(false);
         //bl = false;
+
+        //아영이넣음
+        if(ClickManager.CanvasUI==1)
+        {
+            ClickArea.SetActive(true);
+            PhoneUI.SetActive(false);
+            ClickManager.CanvasUI = 0;
+
+            return;
+        }
         MainCamera.gameObject.SetActive(true);
 
         Left1Camera.gameObject.SetActive(false);

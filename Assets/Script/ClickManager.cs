@@ -6,7 +6,10 @@ public class ClickManager : MonoBehaviour
 {
     
     public Camera Left1Camera, Left2Camera, Left3Camera, Right1Camera, Right2Camera, Right3Camera, BookCamera, MainCamera, BossCamera, BeamCamera, WallCamera;
-    public GameObject PhoneUI;
+    public GameObject PhoneUI;//아영
+    public static int CanvasUI;//아영
+    public GameObject ClickArea;//아영 right-3
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,9 @@ public class ClickManager : MonoBehaviour
         BeamCamera.gameObject.SetActive(false);
         
         WallCamera.gameObject.SetActive(false);
+
+        //아영
+        CanvasUI = 0;
     }
 
     // Update is called once per frame
@@ -30,6 +36,7 @@ public class ClickManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit = new RaycastHit();
+            
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray.origin, ray.direction, out hit))
             {
@@ -122,6 +129,7 @@ public class ClickManager : MonoBehaviour
                     MainCamera.gameObject.SetActive(false);
                     BeamCamera.gameObject.SetActive(false);
                     WallCamera.gameObject.SetActive(false);
+                    ClickArea.SetActive(false);
                 }
                 if(hit.transform.gameObject.tag == "Boss")
                 {
@@ -187,7 +195,9 @@ public class ClickManager : MonoBehaviour
                 //아영이 넣음
                 if (hit.transform.gameObject.tag == "Phone")
                 {
+                    Debug.Log("왜앙돼");
                     PhoneUI.SetActive(true);
+                    CanvasUI = 1;
                 }
             }
             
