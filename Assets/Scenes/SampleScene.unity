@@ -3753,7 +3753,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a5324ea8109a1b04cb5f8fa02ec9bab6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -39.43
+      value: -39.73
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a5324ea8109a1b04cb5f8fa02ec9bab6,
         type: 3}
@@ -11406,6 +11406,7 @@ MonoBehaviour:
   BossCamera: {fileID: 571388984}
   BeamCamera: {fileID: 1293104267}
   WallCamera: {fileID: 1064630978}
+  PhoneUI: {fileID: 1133211210}
 --- !u!4 &712812478
 Transform:
   m_ObjectHideFlags: 0
@@ -18911,6 +18912,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1133211210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5213166889576742181, guid: e0692fb5c57d61647afb5e9f89cf9c61,
+    type: 3}
+  m_PrefabInstance: {fileID: 2084527230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1135068166
 GameObject:
   m_ObjectHideFlags: 0
@@ -20919,7 +20926,7 @@ GameObject:
   - component: {fileID: 1221588369}
   m_Layer: 0
   m_Name: smartphone
-  m_TagString: Untagged
+  m_TagString: Phone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23739,20 +23746,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382d4eadaa47dd743b9153bd0388e3c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Left1Camera: {fileID: 327434643}
-  Left2Camera: {fileID: 1803085799}
-  Left3Camera: {fileID: 1401987851}
-  Right1Camera: {fileID: 1752828998}
-  Right2Camera: {fileID: 945067679}
-  Right3Camera: {fileID: 706261497}
-  BookCamera: {fileID: 23267021}
-  MainCamera: {fileID: 963194227}
-  BossCamera: {fileID: 571388984}
-  BeamCamera: {fileID: 1293104267}
-  OutCamera: {fileID: 0}
-  WallCamera: {fileID: 1064630978}
-  WallArea: {fileID: 2118983678}
-  check1: 0
 --- !u!4 &1389032145
 Transform:
   m_ObjectHideFlags: 0
@@ -37677,6 +37670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 404484452733789416, guid: 0c6172df491de5441856fe8a628e6672,
+        type: 3}
+      propertyPath: m_TagString
+      value: Phone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c6172df491de5441856fe8a628e6672, type: 3}

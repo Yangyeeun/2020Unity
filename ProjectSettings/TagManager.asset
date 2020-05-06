@@ -27,6 +27,11 @@ TagManager:
   - Wall
   - DragImg
   - Inventory
+  - elementText
+  - amountText
+  - backgroundImage
+  - Element
+  - Phone
   layers:
   - Default
   - TransparentFX

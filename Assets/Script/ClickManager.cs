@@ -6,6 +6,7 @@ public class ClickManager : MonoBehaviour
 {
     
     public Camera Left1Camera, Left2Camera, Left3Camera, Right1Camera, Right2Camera, Right3Camera, BookCamera, MainCamera, BossCamera, BeamCamera, WallCamera;
+    public GameObject PhoneUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -181,6 +182,12 @@ public class ClickManager : MonoBehaviour
                     Right1Camera.gameObject.SetActive(false);
                     BossCamera.gameObject.SetActive(false);
                     MainCamera.gameObject.SetActive(false);
+                }
+
+                //아영이 넣음
+                if (hit.transform.gameObject.tag == "Phone")
+                {
+                    PhoneUI.SetActive(true);
                 }
             }
             
