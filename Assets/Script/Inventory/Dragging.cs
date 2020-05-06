@@ -9,7 +9,7 @@ public class Dragging : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     private Transform itemListTr;
     private CanvasGroup canvasGroup;
     public static GameObject draggingItem = null;
-    
+    public static Vector2 defaultposition;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +29,7 @@ public class Dragging : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         this.transform.SetParent(inventoryTr);
         draggingItem = this.gameObject;
         canvasGroup.blocksRaycasts = false;
+        defaultposition = this.transform.position;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -45,6 +46,10 @@ public class Dragging : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
         if(itemTr.parent == inventoryTr)
         {
             itemTr.SetParent(itemListTr.transform);
+        }
+        else
+        {
+            this.transform.position = defaultposition;
         }
     }
 }
